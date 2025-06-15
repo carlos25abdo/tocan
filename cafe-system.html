@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>منظومة المقاهي والمطاعم - شركة الطوقان للبرمجيات</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Tajawal', sans-serif;
+            direction: rtl;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #ff8800;
+            padding: 15px 20px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 70px;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.1);
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            transform: scale(1.1);
+            color: #ffd700;
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .system-hero {
+            background: linear-gradient(to left, #ff8800, #ffaa00);
+            color: white;
+            padding: 180px 20px 40px;
+            text-align: center;
+            margin-top: 0;
+        }
+
+        .system-hero h1 {
+            font-size: 44px;
+            margin-bottom: 18px;
+        }
+
+        .system-hero p {
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
+
+        .system-icon {
+            font-size: 60px;
+            color: #fff;
+            background: #ff8800;
+            border-radius: 50%;
+            padding: 18px 22px;
+            margin-bottom: 18px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            display: inline-block;
+        }
+
+        .system-box {
+            background: #fff;
+            color: #ff8800;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+            padding: 30px 20px;
+            margin: -60px auto 40px;
+            max-width: 700px;
+            font-size: 20px;
+            font-weight: bold;
+            position: relative;
+            z-index: 2;
+            text-align: center;
+        }
+
+        .features-section {
+            padding: 40px 20px 80px;
+            background-color: white;
+            text-align: center;
+        }
+
+        .features-section h2 {
+            color: #ff8800;
+            margin-bottom: 30px;
+            font-size: 32px;
+        }
+
+        .features-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            background: #f8f9fa;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.07);
+            padding: 25px 18px;
+            text-align: center;
+            font-size: 18px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .feature-item i {
+            color: #ff8800;
+            font-size: 26px;
+        }
+
+        .system-image {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+            margin: 40px auto 10px;
+            display: block;
+        }
+
+        .cta-section {
+            background-color: #ff8800;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: white;
+            color: #ff8800;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .social-links {
+            margin-top: 20px;
+        }
+
+        .social-links a {
+            color: white;
+            font-size: 24px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #ff8800;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="assets/logo.png" class="logo" alt="شعار الطوقان" />
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html"><i class="fa fa-home"></i> الرئيسية</a></li>
+                    <li><a href="about.html"><i class="fa fa-user"></i> من نحن</a></li>
+                    <li><a href="index.html#systems"><i class="fa fa-cogs"></i> منظوماتنا</a></li>
+                    <li><a href="index.html#contact"><i class="fa fa-phone"></i> تواصل معنا</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="system-hero" data-aos="fade-up">
+        <span class="system-icon"><i class="fas fa-mug-hot"></i></span>
+        <h1>منظومة المقاهي والمطاعم</h1>
+        <p>تحسين تجربة الزبائن، إدارة الطلبات، تنظيم الطاولات، ومتابعة المبيعات بسهولة واحترافية.</p>
+    </section>
+
+    <div class="system-box" data-aos="fade-up">
+        منظومة المقاهي والمطاعم من الطوقان تمنحك تحكمًا كاملاً في عمليات الطلب، إدارة الطاولات، الفواتير، وتقديم تقارير
+        دقيقة لتحسين الأداء.
+    </div>
+
+    <section class="features-section" data-aos="fade-up">
+        <h2>مميزات المنظومة</h2>
+        <div class="features-list">
+            <div class="feature-item"><i class="fas fa-utensils"></i> إدارة الطلبات والطاولات بشكل مرن وسريع</div>
+            <div class="feature-item"><i class="fas fa-receipt"></i> إصدار فواتير إلكترونية وتقارير مبيعات</div>
+            <div class="feature-item"><i class="fas fa-bell"></i> تنبيهات جاهزية الطلبات للمطبخ</div>
+            <div class="feature-item"><i class="fas fa-users"></i> إدارة العملاء وبرامج الولاء</div>
+            <div class="feature-item"><i class="fas fa-chart-pie"></i> تقارير تحليلية لحركة المبيعات والأصناف</div>
+            <div class="feature-item"><i class="fas fa-user-shield"></i> صلاحيات متعددة للمستخدمين وأمان عالي</div>
+        </div>
+        <img class="system-image" src="assets/cafe-system-demo.jpg" alt="عرض توضيحي لمنظومة المقاهي والمطاعم" />
+    </section>
+
+    <section class="cta-section" data-aos="fade-up">
+        <h2>جاهز لتطوير مطعمك أو مقهاك؟</h2>
+        <p>تواصل معنا الآن للحصول على عرض خاص وتجربة المنظومة</p>
+        <a href="index.html#contact" class="cta-button">اطلب عرضًا الآن</a>
+    </section>
+
+    <footer>
+        <p>جميع الحقوق محفوظة © شركة الطوقان للبرمجيات 2025</p>
+        <div class="social-links">
+            <a href="https://www.youtube.com/@tocantech" target="_blank" title="يوتيوب"><i
+                    class="fab fa-youtube"></i></a>
+            <a href="https://www.tiktok.com/@tocan.soft" target="_blank" title="تيكتوك"><i
+                    class="fab fa-tiktok"></i></a>
+            <a href="https://www.instagram.com/tocan_tech" target="_blank" title="انستقرام"><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
+</body>
+
+</html>
