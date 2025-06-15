@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منظومة مراكز التدريب - شركة الطوقان للبرمجيات</title>
+    <title>نظام مراكز التدريب - شركة الطوقان للبرمجيات</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -211,12 +211,16 @@
     <header>
         <div class="header-container">
             <img src="assets/logo.png" class="logo" alt="شعار الطوقان" />
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html"><i class="fa fa-home"></i> الرئيسية</a></li>
-                    <li><a href="about.html"><i class="fa fa-user"></i> من نحن</a></li>
-                    <li><a href="index.html#systems"><i class="fa fa-cogs"></i> منظوماتنا</a></li>
-                    <li><a href="index.html#contact"><i class="fa fa-phone"></i> تواصل معنا</a></li>
+                    <li><a href="index.html" onclick="closeMenu()"><i class="fa fa-home"></i> الرئيسية</a></li>
+                    <li><a href="about.html" onclick="closeMenu()"><i class="fa fa-user"></i> من نحن</a></li>
+                    <li><a href="index.html#systems" onclick="closeMenu()"><i class="fa fa-cogs"></i> منظوماتنا</a></li>
+                    <li><a href="index.html#contact" onclick="closeMenu()"><i class="fa fa-phone"></i> تواصل معنا</a>
+                    </li>
                 </ul>
             </nav>
         </div>
@@ -265,7 +269,32 @@
     </footer>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+    <script>
+        AOS.init();
+
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger-menu i');
+            navLinks.classList.toggle('active');
+
+            // تغيير أيقونة الزر
+            if (navLinks.classList.contains('active')) {
+                hamburger.classList.remove('fa-bars');
+                hamburger.classList.add('fa-times');
+            } else {
+                hamburger.classList.remove('fa-times');
+                hamburger.classList.add('fa-bars');
+            }
+        }
+
+        function closeMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            const hamburger = document.querySelector('.hamburger-menu i');
+            navLinks.classList.remove('active');
+            hamburger.classList.remove('fa-times');
+            hamburger.classList.add('fa-bars');
+        }
+    </script>
 </body>
 
 </html>

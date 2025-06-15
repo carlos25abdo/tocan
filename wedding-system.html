@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>منظومة صالات الأفراح - شركة الطوقان للبرمجيات</title>
+    <title>نظام صالات الأفراح - شركة الطوقان للبرمجيات</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -211,12 +211,16 @@
     <header>
         <div class="header-container">
             <img src="assets/logo.png" class="logo" alt="شعار الطوقان" />
+            <button class="hamburger-menu" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
             <nav>
                 <ul class="nav-links">
-                    <li><a href="index.html"><i class="fa fa-home"></i> الرئيسية</a></li>
-                    <li><a href="about.html"><i class="fa fa-user"></i> من نحن</a></li>
-                    <li><a href="index.html#systems"><i class="fa fa-cogs"></i> منظوماتنا</a></li>
-                    <li><a href="index.html#contact"><i class="fa fa-phone"></i> تواصل معنا</a></li>
+                    <li><a href="index.html" onclick="closeMenu()"><i class="fa fa-home"></i> الرئيسية</a></li>
+                    <li><a href="about.html" onclick="closeMenu()"><i class="fa fa-user"></i> من نحن</a></li>
+                    <li><a href="index.html#systems" onclick="closeMenu()"><i class="fa fa-cogs"></i> منظوماتنا</a></li>
+                    <li><a href="index.html#contact" onclick="closeMenu()"><i class="fa fa-phone"></i> تواصل معنا</a>
+                    </li>
                 </ul>
             </nav>
         </div>
